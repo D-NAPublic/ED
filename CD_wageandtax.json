@@ -1,0 +1,79 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "http://www.ibm.com/dba/projects/ED/CD_wageandtax.json",
+    "title": "ED Document Type Definitions",
+    "lastUpdatDate": "",
+    "lastUpdate": "",
+    "comment": "This is a Doc Type Definition showing some different property types",
+    "baForDeployment": true,
+    "definitions": {
+        "wageandtax": {
+            "$id": "#wageandtax",
+            "title": "wage and tax",
+            "allOf": [
+                {
+                    "$ref": "http://www.ibm.com/dba/schemas/#systemDocument"
+                },
+                {
+                    "type": "object",
+                    "description": "",
+                    "baclass": {
+                        "caDocTypeId": "fe8c4f1d-2901-4ddb-907a-2def92ae8e57",
+                        "defaultRetentionPeriod": "None",
+                        "retentionPeriodUnits": ""
+                    },
+                    "properties": {
+                        "FederalIncomeTaxWithheld": {
+                            "allOf": [
+                                {
+                                    "$ref": "unmapped"
+                                },
+                                {
+                                    "caKeyClassName": "FederalIncomeTaxWithheld",
+                                    "caKeyClassId": "f2ca27f5-dd23-4f6c-a0bf-a52494e4b341",
+                                    "caValueType": "text"
+                                }
+                            ]
+                        },
+                        "EmployeeNameandAddress": {
+                            "allOf": [
+                                {
+                                    "$ref": "unmapped"
+                                },
+                                {
+                                    "caKeyClassName": "EmployeeNameandAddress",
+                                    "caKeyClassId": "2961a189-4019-4211-980c-4d30b88026e0",
+                                    "caValueType": "text"
+                                }
+                            ]
+                        },
+                        "EmployeeSocialSecurityNumber": {
+                            "allOf": [
+                                {
+                                    "$ref": "unmapped"
+                                },
+                                {
+                                    "caKeyClassName": "EmployeeSocialSecurityNumber",
+                                    "caKeyClassId": "e5e153d1-f7fb-4de3-804d-58707bdeb452",
+                                    "caValueType": "text"
+                                }
+                            ]
+                        },
+                        "EmployerIdentificationNumber": {
+                            "allOf": [
+                                {
+                                    "$ref": "unmapped"
+                                },
+                                {
+                                    "caKeyClassName": "EmployerIdentificationNumber",
+                                    "caKeyClassId": "f10d803d-84dd-44fb-acda-293e612232f1",
+                                    "caValueType": "text"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
